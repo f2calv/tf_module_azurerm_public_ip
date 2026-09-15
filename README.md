@@ -1,12 +1,12 @@
-# Terraform Module: Azure Public IP
+# Terraform Module for Azure Public IP
 
-Provisions an [Azure Public IP address](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/public_ip) with Standard SKU and static allocation by default.
+Provisions a [Standard static Azure Public IP address](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/public_ip).
 
 ## Usage
 
 ```hcl
 module "pip" {
-  source              = "git::https://github.com/f2calv/tf_module_azurerm_public_ip.git//src?ref=main"
+  source              = "git::https://github.com/f2calv/tf_module_azurerm_public_ip.git//src?ref=v0.2.0"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   public_ip_name      = "my-public-ip"
@@ -19,11 +19,9 @@ module "pip" {
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| `resource_group_name` | `string` | — | Name of the parent resource group |
+| `resource_group_name` | `string` | Required | Name of the parent resource group |
 | `location` | `string` | `West Europe` | Location of the parent resource group |
-| `public_ip_name` | `string` | — | Name of the public IP address |
-| `allocation_method` | `string` | `Static` | Allocation method (Static or Dynamic) |
-| `sku` | `string` | `Standard` | SKU of the public IP (Basic or Standard) |
+| `public_ip_name` | `string` | Required | Name of the public IP address |
 | `domain_name_label` | `string` | `null` | Label for the Domain Name (used to make up the FQDN) |
 | `tags` | `map(string)` | `{}` | Any tags that should be present on the resources |
 

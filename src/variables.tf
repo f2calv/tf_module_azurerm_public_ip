@@ -20,18 +20,6 @@ variable "public_ip_name" {
   description = "Name of the public IP address."
 }
 
-variable "allocation_method" {
-  type        = string
-  description = "Allocation method for the public IP (Static or Dynamic)."
-  default     = "Static"
-}
-
-variable "sku" {
-  type        = string
-  description = "SKU of the public IP (Basic or Standard)."
-  default     = "Standard"
-}
-
 variable "domain_name_label" {
   type        = string
   description = "Label for the Domain Name. Will be used to make up the FQDN."
