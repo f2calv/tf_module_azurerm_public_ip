@@ -1,7 +1,4 @@
----
-title: Terraform Module for Azure Public IP
-description: Provision a Standard static Azure Public IP address
----
+# Terraform Module for Azure Public IP
 
 Provisions a [Standard static Azure Public IP address](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/public_ip).
 
