@@ -18,7 +18,7 @@ graph LR
 
 ```hcl
 module "pip" {
-  source              = "git::https://github.com/f2calv/tf_module_azurerm_public_ip.git//src?ref=0.2.1"
+  source              = "git::https://github.com/f2calv/tf_module_azurerm_public_ip.git//src?ref=0.2.2"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   public_ip_name      = "my-public-ip"
