@@ -6,10 +6,6 @@ Shared Copilot instruction files are maintained centrally in the [.github](https
 
 Everything below is specific to this repository.
 
-## Repository Purpose
-
-This repository publishes a single reusable Terraform child module that provisions an Azure public IP address for use by load balancers, gateways and ingress controllers.
-
 ## Address Churn
 
 Destroying and recreating a public IP allocates a new address, which invalidates any DNS record pointing at it. Call this out in the root `README.md` so consumers plan the DNS change alongside the apply.
